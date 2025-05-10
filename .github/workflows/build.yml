@@ -5,6 +5,7 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  workflow_dispatch:  # Allow the workflow to be triggered manually
 
 jobs:
   build:
@@ -24,9 +25,6 @@ jobs:
 
     - name: Build with Gradle (skip tests)
       run: ./gradlew build -x test
-
-    - name: List build directory (debugging)
-      run: ls -alh build/libs/
 
     - name: Upload build artifact
       uses: actions/upload-artifact@v3
