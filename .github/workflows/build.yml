@@ -30,7 +30,7 @@ jobs:
       run: ls -alh build/libs/  # Debug step to verify output
 
     - name: Upload build artifact
-      uses: actions/upload-artifact@v3  # Using v3 for better compatibility
+      uses: actions/upload-artifact@v2  # Use stable v2 here
       with:
         name: Aoba-Client-Jar
         path: build/libs/*.jar
