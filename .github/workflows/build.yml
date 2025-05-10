@@ -27,7 +27,7 @@ jobs:
       run: ./gradlew build -x test
 
     - name: Upload build artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v2  # Use v2 here instead of v3
       with:
         name: Aoba-Client-Jar
         path: build/libs/*.jar
